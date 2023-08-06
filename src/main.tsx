@@ -5,6 +5,7 @@ import { WagmiProvider } from "@/components/WagmiProvider";
 import { UrqlProvider } from "@/components/UrqlProvider";
 
 import "./index.css";
+import "@rainbow-me/rainbowkit/styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
