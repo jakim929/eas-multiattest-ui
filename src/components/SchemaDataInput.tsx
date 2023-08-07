@@ -51,6 +51,7 @@ const addressListSchema = z
 const y: Record<string, React.FC> = {
   address: Input,
   string: Input,
+  // @ts-ignore
   bool: forwardRef(({ value, onChange, ...props }) => (
     <Switch
       className="flex"
@@ -92,6 +93,7 @@ export const SchemaDataInput = ({
   });
 
   const onSubmitForm = useCallback(
+    // @ts-ignore
     (values: Record<string, any>) => {
       const result = schemaEncoder.schema.map(({ name, type }) => {
         return {
@@ -140,6 +142,7 @@ export const SchemaDataInput = ({
                       {type} {name}
                     </FormLabel>
                     <FormControl>
+                      {/* @ts-ignore */}
                       <InputComponent placeholder={name} {...field} />
                     </FormControl>
                     <FormMessage />

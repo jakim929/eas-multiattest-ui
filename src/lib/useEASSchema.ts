@@ -23,7 +23,7 @@ export const useEASSchema = ({
   schemaId?: Hex;
   enabled?: boolean;
 }) => {
-  const [result, reexecuteQuery] = useQuery({
+  const [result] = useQuery({
     query: SchemaQuery,
     variables: {
       where: {

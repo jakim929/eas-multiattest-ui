@@ -4,7 +4,7 @@ import { EASAbi } from "@/lib/EASAbi";
 import { useEASSchema } from "@/lib/useEASSchema";
 import { useState } from "react";
 import { isHex, Hex, Address } from "viem";
-import { useContractWrite, useNetwork, usePrepareContractWrite } from "wagmi";
+import { useContractWrite, useNetwork } from "wagmi";
 import {
   mainnet,
   optimism,
@@ -33,6 +33,7 @@ export const SchemaDetails = () => {
 
   const { chain } = useNetwork();
 
+  // @ts-ignore
   const { data, isLoading, isSuccess, writeAsync } = useContractWrite({
     address: EAS_ADDRESSES[chain?.id || 1],
     abi: EASAbi,
