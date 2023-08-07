@@ -13,7 +13,7 @@ import {
 } from "wagmi/chains";
 
 const EAS_GRAPHQL_ENDPOINTS: Record<number, string> = {
-  [mainnet.id]: "	https://easscan.org/graphql",
+  [mainnet.id]: "https://easscan.org/graphql",
   [optimism.id]: "https://optimism.easscan.org/graphql",
   [arbitrum.id]: "https://arbitrum.easscan.org/graphql",
   [sepolia.id]: "https://sepolia.easscan.org/graphql",
